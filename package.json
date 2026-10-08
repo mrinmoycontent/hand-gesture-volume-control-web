@@ -1,0 +1,14 @@
+{
+  "name": "hand-gesture-volume-control-web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "rm -rf public && mkdir -p public && npx esbuild app.js --bundle --format=iife --outfile=public/app.js && cp index.html style.css public/ && cp -R node_modules/@mediapipe/tasks-vision/wasm public/wasm"
+  },
+  "dependencies": {
+    "@mediapipe/tasks-vision": "1.0.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}
